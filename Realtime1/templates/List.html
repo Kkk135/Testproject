@@ -1,0 +1,52 @@
+<html>
+<body bgcolor="#b8860b">
+<style>
+h2 {
+  color:    #ff0000;
+  text-shadow: 2px 2px 4px #000000;
+}
+</style>
+</head>
+<body>
+<marquee>
+<h2>
+శ్రీ రామ్ అండ్
+ యు.ఎం.ఎన్.ఎం.స్.ర్.స్ హోటల్  /श्री .राम और यू.एम.एन.एम.आर.एस.एस. होतल/Sri.Ram and U.M.N.M.S.R.S Hotal
+</h2>
+</marquee>
+
+<form>
+    <table border="18">
+        <tr>
+            <th width="100">Delete</th>
+            <th width="100">ROOM</th>
+            <th width="100">PHONE</th>
+            <th width="100">Update</th>
+
+
+        </tr>
+        {% for x in object_list %}
+            <tr>
+            <td>
+                <form action="/delete{{ x.Room }}/" >
+             <button type="submit">Del</button></form></td>
+
+            <td width="150">{{ x.Room }}</td>
+            <td width="150">{{ x.phone }}</td>
+
+
+            <td>
+            <form  action="/update{{ x.Room }}/" >
+
+                <button type="submit">yes</button>
+                </form>
+            </td>
+
+        {% endfor %}
+    </table>
+<tr><td><input type="button" value="Go Back!" onclick="history.back()"></td></tr>
+</form>
+</body>
+</html>
+
+

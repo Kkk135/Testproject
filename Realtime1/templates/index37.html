@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<html>
+<body bgcolor="#b8860b">
+<form method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td>
+                <img src="{% static "images/Rhi29.jpg" %}" width="800">
+            </td>
+            <td>
+                <a href="{% url "index8" %}">Register Booking Room</a>
+            </td>
+        </tr>
+    </table>
+</form>
+ <input type="submit" value="Go Back!" onclick="history.back()">
+</body>
+</html>
